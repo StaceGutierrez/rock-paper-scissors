@@ -12,13 +12,15 @@
         <br>
         <br>
         <!--the user is prompted to select an option-->
-        <div class="user-container">
-            <label class="game-pieces">Start by select an option:</label>
-            <select name="pieces" id="options" required>
-                <option value="rock">Rock</option>
-                <option value="paper">Paper</option>
-                <option value="scissors">Scissors</option>
-            </select>
-        </div>    
+        <div id="game"></div>
+            <div class="user-container"
+                <label for="user-pieces" class="game-pieces"> Start by select an option:</label>
+                <select name="user-pieces" id="userDropdown"  onchange="selectOption" required>
+                    <option value="rock">rock</option>
+                    <option value="paper">paper</option>
+                    <option value="scissors">scissors</option>
+                </select>
+            </div>    
+        <script src="javascript.js"></script>    
     </body>
 </html>
