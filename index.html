@@ -9,18 +9,26 @@
     <body>
         <h1>WELCOME!</h1>
         <h2>Let's Play! The game is rock, paper, scissors!</h2>
-        <br>
-        <br>
-        <!--the user is prompted to select an option-->
-        <div id="game"></div>
-            <div class="user-container"
-                <label for="user-pieces" class="game-pieces"> Start by select an option:</label>
-                <select name="user-pieces" id="userDropdown"  onchange="selectOption" required>
-                    <option value="rock">rock</option>
-                    <option value="paper">paper</option>
-                    <option value="scissors">scissors</option>
+        <div id="game">
+            <div class="scoreBox">
+                <p id="user-score"></p>
+                <p id="comp-score"></p>
+            </div>
+            <div id="perRound">
+                <p id="userChoice"></p>
+                <p id="compChoice"></p>
+                <p id="results"></p>
+            </div>
+        </div>
+        <div class="userContainer">
+            <label name="user-pieces" class="game-pieces">Start by selecting an option from the menu below:</label>
+            <div class="buttonGrp">
+                    <button id="rock" class="user-pieces">rock</button>
+                    <button id="paper" class="user-pieces">paper</button>
+                    <button id="scissors" class="user-pieces">scissors</button>
                 </select>
             </div>    
+        </div>  
         <script src="javascript.js"></script>    
     </body>
 </html>
