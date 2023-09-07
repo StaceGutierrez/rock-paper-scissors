@@ -18,19 +18,17 @@ compRoundShow.innerHTML = compScore
 userRoundShow.innerHTML = userScore
 
 
-const userSelect = document.getElementById("userDropdown"); 
-//pulls user selection from dropdown list
-userSelect.onchange = function() { 
-    //looks for change in user selection
-    let selectedIndex = userSelect.selectedIndex;
-    // Sets selectedIndex to index number
-    userOption = userSelect.options[userSelect.selectedIndex].text;
-    // set userOption to value indexed from user.Select
-    userOptionShow.innerHTML = "You have chosen: " + userOption;
+//click trigger and variable assignment of userChoice
+possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) => {userChoice = e.target.id
+    userOptionShow.innerHTML = "You have Chosen: " + userChoice
     generateCompOption()
     getResult()
+    games()
+    }))
     
-}
+//click trigger for compChoice    
+possibleChoicesC.forEach(possibleChoicesC => possibleChoicesC.addEventListener('click', (e) => {compChoice = e.target.id}))
+
 
 const generateCompOption = () => {
     randomChoice = gamePieces[Math.floor(Math.random() * gamePieces.length)]
