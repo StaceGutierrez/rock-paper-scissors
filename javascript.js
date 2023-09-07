@@ -20,7 +20,7 @@ userRoundShow.innerHTML = userScore
 
 //click trigger and variable assignment of userChoice
 possibleChoices.forEach(possibleChoices => possibleChoices.addEventListener('click', (e) => {userChoice = e.target.id
-    userOptionShow.innerHTML = "You have Chosen: " + userChoice
+    userOptionShow.innerHTML = "You have chosen: " + userChoice
     generateCompOption()
     getResult()
     games()
@@ -33,15 +33,15 @@ possibleChoicesC.forEach(possibleChoicesC => possibleChoicesC.addEventListener('
 const generateCompOption = () => {
     randomChoice = gamePieces[Math.floor(Math.random() * gamePieces.length)]
     // randomly chooses number and sets random choice to value at indexed value
-    compOption = randomChoice
+    compChoice = randomChoice
     // Pass randomChoice to compOption 
-    compOptionShow.innerHTML = "The computer chose: " + compOption
+    compOptionShow.innerHTML = "The computer chose: " + compChoice
 }
 
 
 // matches userOption and compOption to determine winner
 const getResult = () => {
-    switch (userOption + compOption) {
+    switch (userChoice + compChoice) {
         case "rockscissors":
         case "paperrock":
         case "scissorspaper":
@@ -55,21 +55,18 @@ const getResult = () => {
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
-        result.innerHTML = "It's a Draw"
-        break
+            result.innerHTML = "It's a Draw!"
+            break
     }
 }
-console.log(result)
-console.log(document.getElementsByClassName(".results").data)
 
-// const games = () => {
-//     if ( result === "You Lose!") {
-//         alert("you lose!");
-        
-//     } else if (result === "You Win!") {
-//         alert("You Win!");
-//     } 
-
-// }
-// console.log(compScore)
-// console.log(userScore)
+//tracks the score of the users.
+function games(result) {
+    if (document.getElementById('results').innerHTML === "Computer Wins!") {
+        compScore+= 1;
+        return compRoundShow.innerHTML = compScore;
+    } else if (document.getElementById('results').innerHTML === "You Win!") {
+        userScore+= 1;
+        return userRoundShow.innerHTML = userScore;
+    }
+}
