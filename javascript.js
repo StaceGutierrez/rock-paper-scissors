@@ -14,8 +14,8 @@ let compChoice
 let compScore = 0
 let userScore = 0
 
-compRoundShow.innerHTML = compScore
-userRoundShow.innerHTML = userScore
+compRoundShow.innerHTML = "Computer Score: " + compScore
+userRoundShow.innerHTML = "Your Score: " + userScore
 
 
 //click trigger and variable assignment of userChoice
@@ -64,9 +64,9 @@ const getResult = () => {
 function games(result) {
     if (document.getElementById('results').innerHTML === "Computer Wins!") {
         compScore+= 1;
-        return compRoundShow.innerHTML = compScore;
+        return compRoundShow.innerHTML = "Computer Score: " + compScore;
     } else if (document.getElementById('results').innerHTML === "You Win!") {
         userScore+= 1;
-        return userRoundShow.innerHTML = userScore;
+        return userRoundShow.innerHTML = "Your Score: " + userScore;
     }
 }
