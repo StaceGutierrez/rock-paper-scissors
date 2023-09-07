@@ -1,13 +1,21 @@
 
 const gamePieces = ["rock", "paper", "scissors"]
-const userOptionShow = document.createElement('h2')
-const compOptionShow = document.createElement('h2')
-const result = document.createElement('h2')
-const gameGrid = document.getElementById('game')
-gameGrid.append(userOptionShow, compOptionShow, result)
+const userOptionShow = document.getElementById('userChoice')
+const compOptionShow = document.getElementById('compChoice')
+const result = document.getElementById('results')
+const userRoundShow = document.getElementById("user-score")
+const compRoundShow = document.getElementById("comp-score")
+const possibleChoices = document.querySelectorAll('button')
+const possibleChoicesC = document.querySelectorAll('button')
 
-let userOption
-let compOption
+
+let userChoice
+let compChoice
+let compScore = 0
+let userScore = 0
+
+compRoundShow.innerHTML = compScore
+userRoundShow.innerHTML = userScore
 
 
 const userSelect = document.getElementById("userDropdown"); 
@@ -21,6 +29,7 @@ userSelect.onchange = function() {
     userOptionShow.innerHTML = "You have chosen: " + userOption;
     generateCompOption()
     getResult()
+    
 }
 
 const generateCompOption = () => {
@@ -30,6 +39,8 @@ const generateCompOption = () => {
     // Pass randomChoice to compOption 
     compOptionShow.innerHTML = "The computer chose: " + compOption
 }
+
+
 // matches userOption and compOption to determine winner
 const getResult = () => {
     switch (userOption + compOption) {
@@ -41,7 +52,7 @@ const getResult = () => {
         case "rockspaper":
         case "paperscissors":
         case "scissorsrock":
-            result.innerHTML = "You Lose!"
+            result.innerHTML = "Computer Wins!"
             break
         case "rockrock":
         case "paperpaper":
@@ -50,3 +61,17 @@ const getResult = () => {
         break
     }
 }
+console.log(result)
+console.log(document.getElementsByClassName(".results").data)
+
+// const games = () => {
+//     if ( result === "You Lose!") {
+//         alert("you lose!");
+        
+//     } else if (result === "You Win!") {
+//         alert("You Win!");
+//     } 
+
+// }
+// console.log(compScore)
+// console.log(userScore)
