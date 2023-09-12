@@ -1,3 +1,30 @@
 * {
-    text-align: center;
+    /* background-image: url('images/background-image.jpg'); */
+    color: #EFC7C2;
+    font-family: Luminari; 
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('images/background-image.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer {
+    background-color: #401848;
+    margin: 30px;
+}
+
+div img {
+    max-width: 200px;
+    border-radius: 100;
+    border: none;
+    display: flex;
+    flex: 1;
+    background-color: none;
+
 }
