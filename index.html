@@ -7,28 +7,29 @@
     </head>
 
     <body>
-        <h1>WELCOME!</h1>
-        <h2>Let's Play! The game is rock, paper, scissors!</h2>
-        <div id="game">
-            <div class="scoreBox">
-                <p id="user-score"></p>
-                <p id="comp-score"></p>
+        <div class="mainContainer"></div>
+            <h1>WELCOME!</h1>
+            <h2>Let's Play! The game is rock, paper, scissors!</h2>
+            <div id="game">
+                <div class="scoreBox">
+                    <p id="user-score"></p>
+                    <p id="comp-score"></p>
+                </div>
+                <div id="perRound">
+                    <p id="userChoice"></p>
+                    <p id="compChoice"></p>
+                    <p id="results"></p>
+                </div>
             </div>
-            <div id="perRound">
-                <p id="userChoice"></p>
-                <p id="compChoice"></p>
-                <p id="results"></p>
+            <div class="userContainer">
+                <label name="user-pieces" class="game-pieces">Start by selecting an option from the menu below:</label>
+                <div class="buttonGrp">
+                        <button id="rock" class="user-pieces"><img src="images/rock.png" class="gameImg"></button>
+                        <button id="paper" class="user-pieces"><img src="images/paper.png" class="gameImg"></button>
+                        <button id="scissors" class="user-pieces"><img src="images/scissors.png" class="gameImg"></button>
+                </div>    
             </div>
-        </div>
-        <div class="userContainer">
-            <label name="user-pieces" class="game-pieces">Start by selecting an option from the menu below:</label>
-            <div class="buttonGrp">
-                    <button id="rock" class="user-pieces">rock</button>
-                    <button id="paper" class="user-pieces">paper</button>
-                    <button id="scissors" class="user-pieces">scissors</button>
-                </select>
-            </div>    
-        </div>  
+        </div>      
         <script src="javascript.js"></script>    
     </body>
 </html>
