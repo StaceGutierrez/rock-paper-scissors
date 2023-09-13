@@ -54,6 +54,26 @@ h1 {
     gap: 10px; 
 }
 
+/* SCOREBOX SECTION */
+
+#game {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+}
+
+.scoreBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+
+
+
+
+
 .buttonGrp {
     display: flex;
     padding: 20px;
