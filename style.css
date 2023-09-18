@@ -21,8 +21,8 @@ body {
 
 .mainContainer {
     background-color: #401848;
-    margin: 50px;
-    padding: 50px;
+    margin: 5vw;
+    padding: 5vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -101,6 +101,10 @@ h3 {
     border: 0;
 }
 
+.user-pieces:hover {
+    background-color: #EFC7C2;
+}
+
 .rockimg, .paperimg, .scissorsimg {
     padding: 20px;
     margin: 20px;
@@ -111,3 +115,4 @@ h3 {
 div img {
     max-width: 200px;
 }
+
