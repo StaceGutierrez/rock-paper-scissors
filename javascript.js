@@ -1,4 +1,4 @@
-const gamePieces = ['rock', 'paper', 'scissors'];
+const gamePieces = ['crystal', 'potion', 'spell'];
 const roundCountDisplay = document.getElementById('round-counter');
 const userScoreDisplay = document.getElementById('user-score');
 const compScoreDisplay = document.getElementById('comp-score');
@@ -11,6 +11,9 @@ let compScore = 0;
 let round = 0;
 let userChoice = ''
 let compChoice = ''
+
+userScoreDisplay.innerHTML = userScore;
+compScoreDisplay.innerHTML = compScore;
 
 // listens for click of button to start game
 userBtn.forEach(userBtn => userBtn.addEventListener('click', (e) => {
@@ -35,19 +38,19 @@ const countRound = () => {
 
 const getResult = () => {
     switch (userChoice + randomChoice) {
-        case "rockscissors":
-        case "paperrock":
-        case "scissorspaper":
+        case "crystalspell":
+        case "potioncrystal":
+        case "spellpotion":
             result.innerHTML = "You Win!";
             break;
-        case "rockspaper":
-        case "paperscissors":
-        case "scissorsrock":
+        case "crystalpotion":
+        case "potionspell":
+        case "spellcrystal":
             result.innerHTML = "Opponent Wins!";
             break;
-        case "rockrock":
-        case "paperpaper":
-        case "scissorsscissors":
+        case "crystalcrystal":
+        case "potionpotion":
+        case "spellspell":
             result.innerHTML = "It's a Draw!";
             break;
     }
