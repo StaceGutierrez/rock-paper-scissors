@@ -29,6 +29,11 @@
             </div>
         </div>
             <div id="game">
+                <div id="roundTicker">
+                    <p id="round-text">Round </p>
+                    <p id="round-counter"></p>
+                    <p id="results"></p>
+                </div>
                 <div class="scoreBox">
                     <div class="user-scorebox">
                     <p class="user-score-text">Your Score</p>
@@ -41,18 +46,19 @@
                 </div>
                 <div id="perRound">
                     <p>Your Opponent has chosen </p>
-                    <p id="compChoice"></p>
-                    <p id="results"></p>
+                    <p id="comp-choice"></p>
+                    
                 </div>
             </div>
-            <div class="userContainer">
                 <div class="buttonGrp">
-                        <div class="rockimg"><button id="rock" class="user-pieces"><img src="images/rock.png" class="gameImg"></button></div>
-                        <div class="paperimg"><button id="paper" class="user-pieces"><img src="images/paper.png" class="gameImg"></button></div>
-                        <div class="scissorsimg"><button id="scissors" class="user-pieces"><img src="images/scissors.png" class="gameImg"></button></div>
+                        <div class="rockimg"><button id="rock" class="user-pieces" value="rock"><img src="images/rock.png" class="gameImg" alt="rock">rock</button></div>
+
+                        <div class="paperimg"><button id="paper" class="user-pieces" value="paper"><img src="images/paper.png" class="gameImg">paper</button></div>
+
+                        <div class="scissorsimg"><button id="scissors" class="user-pieces" value="scissors"><img src="images/scissors.png" class="gameImg">scissors</button></div>
                 </div>    
-            </div>
         </div>      
-        <script src="javascript.js"></script>    
+            
     </body>
+    <script src="javascript.js"></script>
 </html>
