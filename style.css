@@ -83,6 +83,8 @@ h3 {
     align-items: center;
     font-family: Macondo, sans-serif;
     flex: 1;
+    padding: 15px;
+    gap: 15px;
 }
 
 .scoreBox {
@@ -90,29 +92,40 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 60px;
+    padding: 10px;
 }
 
 
 .buttonGrp {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     flex: 1 1 auto;
     flex-wrap: wrap;
     border: 0;
+    border-radius: 50%;
+    background-color: #401848;
 }
 
-.user-pieces:hover {
+button:hover {
     background-color: #EFC7C2;
+    border-radius: 50%;
 }
 
 .rockimg, .paperimg, .scissorsimg {
-    padding: 20px;
-    margin: 20px;
+    padding: 0px;
+    margin: 0px;
     border: 0;
-    display: flex;    
+    display: flex;   
+    border-radius: 50%; 
+    
 }
 
 div img {
     max-width: 200px;
+    border-radius: 50%;
+    display: flex;
+    padding: 5px;
 }
 
